@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+body{
+	background-color: black;
+	color: white;
+	background-image: url("dragons.png");
+	background-position: center;
+	background-size: cover;
+}
+
+
+
+header{
+	position: relative;
+	border-bottom-style: solid;
+   	border-width: 1px;
+   	border-color: red;
+}
+.logo-img {
+	position: absolute;
+	left: 30%;
+	right:30%;
+	top: 35%;
+	z-index: 2;
+}
+.Container-div{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+
+h1{
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+}
+h2{
+  font-family: "DM Serif Display", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+a{
+	color: white;
+	font-family: "DM Serif Display", serif;
+  	font-weight: 100;
+ 	font-style: italic;
+	text-decoration: none;
+}
+
+
+
+section{
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+section li{
+	padding-bottom: 10px;
+}
+.Info-div{
+	
+	width: 100%;
+	text-align: center;
+	
+}
+.Ingredient-Section{
+	width: 30%;
+	}
+.Instructions-Section{
+	
+	width: 50%;
+	border-left-style: dotted;
+   	border-width: 1px;
+   	border-color: white;
+	padding-left: 10px;
+	}
+.summary-div{
+}
+
+
+footer{
+	margin-top: 10%;
+	text-align: center;
+}
