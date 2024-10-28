@@ -1,0 +1,161 @@
+body {
+  height: 100vh;
+  overflow-y: hidden; 
+  cursor: url('https://cdn.prod.website-files.com/64aefcd4b94b7ef8acd14e51/6716c6d03b0af14580f52125_mouse.png') 64 64, auto !important;
+  font-family: "MillionAstteroids R9njo", sans-serif; 
+  margin: 0; 
+}
+
+a {
+  cursor: url('https://cdn.prod.website-files.com/64aefcd4b94b7ef8acd14e51/6716c6d057d8ab0be7f2056a_link.png') 64 64, auto !important;
+}
+
+@font-face {
+  font-family: "MillionAstteroids R9njo";
+  src: url("MillionAstteroids-R9njo.ttf") format("woff2"); 
+}
+
+.wedding-landing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+}
+
+.mask-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 45%;
+	pointer-events:auto;
+}
+
+.polaroid-photo {
+  height: 60%;
+  z-index: -3;
+  position: relative;
+  align-self: center;  
+}
+
+.gate {
+  position: absolute;
+  height: 50%;
+  z-index: -1;
+	padding-top: 5px;
+}
+
+.gate-mask {
+  height: 62%;
+  position: absolute;
+  z-index: -1;
+}
+
+.wedding-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.top-text {
+    display: flex;
+    justify-content: center;
+    font-size: 6rem; 
+}
+
+
+
+.top-right {
+  width: 40%;
+  position: absolute;
+  top: -1%;
+  right: -1%; 
+}
+
+.bottom-left {
+  width: 45%;
+  position: absolute;
+  bottom: -1%;
+  left: -1%; 
+}
+
+.bottom-middle {
+  width: 50%;
+  position: absolute;
+  bottom: -1%;
+  left: -1%; 
+}
+
+.pageloader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #f0c3c3; 
+  padding-top: 10%;
+}
+
+.pageload-logo {
+  width: 50%;
+  height: 60%;
+  object-fit: fill;
+}
+
+h1, h2 {
+  margin: 0; 
+}
+
+h2 {
+  font-size: 5rem;
+	color: #f0c3c3;
+}
+
+
+
+.wedding-info{
+	overflow: hidden;
+	pointer-events: none;
+	background-color: #f0c3c3;
+	z-index: 1000;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	opacity: .5;
+	object-fit: cover
+}
+
+.info-heading {
+	position: absolute;
+	top: 20%;
+	width:45%;
+	align-content: center;
+	justify-content: center;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+
+p {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 1rem
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+
+<style type="text/css">	
+body {cursor: url('https://cdn.prod.website-files.com/64aefcd4b94b7ef8acd14e51/6716c6d03b0af14580f52125_mouse.png') 64 64, auto !important;}
+a {cursor: url('https://cdn.prod.website-files.com/64aefcd4b94b7ef8acd14e51/6716c6d057d8ab0be7f2056a_link.png') 64 64, auto !important;}
+	
+	
+@font-face {
+	font-family:"MillionAstteroids R9njo";
+	}
+	
+</style>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+	
+</head>
+	
+	
+<body>
+<div class="pageloader">
+	<img class="pageload-logo" src="6716c8d297444b0f7c170484_pageload-logo.png"/>
+	</div>
+	
+	
+<div class="wedding-landing">
+	<div class="wedding-text">
+	<div class="top-text">
+		<h1 class="top-text left">You've</h1>
+		<h1 class="top-text right">Been</h1>
+	</div>
+	<h2>Invited</h2>	
+	</div>
+	
+	<a class="mask-container">
+		<img class="polaroid-photo" src="picture of italy.jpg"/> 
+		<img class="gate" src="gate.webp"/> 
+		<img class="gate-mask" src="gate-mask.png"/>
+	</a>
+	
+	<div class="flowers-container">
+	<img class="top-right" src="flowers-topright.png"/> 
+	<img class="bottom-left" src="flowers-bottomleft.png"/> 
+	<img class="bottom-middle" src="flowers-bottommiddle.png"/> 
+	</div>
+	
+	
+	
+	</div>
+	
+	
+<div class= "wedding-info">
+	<img class="shadow" src="https://cdn.prod.website-files.com/64aefcd4b94b7ef8acd14e51/6715704679848e76036387cf_shadow-png.png"/>
+	<div class="info-heading">
+	<h1>A Love Story Unfolds</h1>
+		<p>On a beautiful day filled with love and joy, Asma and Eli exchanged vows in a heartfelt ceremony surrounded by family and friends. Set against the stunning backdrop of Secret Gardens Miami, the couple's love story unfolded as they promised to cherish and support each other for a lifetime. The day was filled with laughter, touching moments, and celebration, culminating in a lively reception where everyone danced the night away. As the couple begins their new journey together, they carry with them the warmth of cherished memories and the support of their loved ones.</p>
+	</div>
+</div>
+	
+ <script>
+        // Pageloader
+        window.addEventListener("load", () => {
+            gsap.to([".pageload-logo", ".pageloader"], {
+                opacity: 0,
+                duration: 1,
+                delay: 2,
+                onComplete: () => {
+                    document.querySelector(".pageloader").style.display = "none";
+                    document.querySelector("main").style.display = "block";
+                    gsap.from("main", { opacity: 0, duration: 1 });
+                }
+            });
+
+            // Parallax
+            gsap.registerPlugin(ScrollTrigger);
+
+            const flowers = document.querySelectorAll('.top-right, .bottom-left, .bottom-middle');
+            const maskItems = document.querySelectorAll('.mask-container img');
+            const shadow = document.querySelector('.shadow');
+
+            const parallaxItems = [...flowers, ...maskItems, shadow]; 
+
+            window.addEventListener('mousemove', (event) => {
+                const { clientX: mouseX, clientY: mouseY } = event;
+                const centerX = window.innerWidth / 2; 
+                const centerY = window.innerHeight / 2; 
+
+                parallaxItems.forEach((item, index) => {
+                    const moveX = ((mouseX - centerX) / centerX) * 5; // Movement
+                    const moveY = ((mouseY - centerY) / centerY) * 5; 
+                   
+                    gsap.to(item, {
+                        x: moveX * (index % 2 === 0 ? 1 : -1),
+                        y: moveY,
+                        ease: 'power1.out',
+                    });
+                });
+            });
+
+       
+            document.querySelector('.mask-container').addEventListener('click', () => {
+                gsap.to(".wedding-landing", {
+                    opacity: 0,
+                    duration: 1,
+                    onComplete: () => {
+                        gsap.to(".wedding-info", {
+                            opacity: 1,
+                            duration: 1
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+	
+	
+	
+	
+
+</body>
+</html>
