@@ -475,6 +475,10 @@ footer {
 	margin-bottom: 50px;
 	margin-top: 150px;
 }
+wrapper {
+	overflow: hidden;
+	height: auto;
+}
 
 @media only screen and (max-width: 768px), 
        only screen and (min-resolution: 2dppx), 
