@@ -13,8 +13,35 @@
 <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</head>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>		
+<script>
+	//pageload and smooth scroll----------------------------------------
+  document.addEventListener("DOMContentLoaded", function () {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    //sequence
+    gsap.from(".top-text", { duration: 1, opacity: 0, y: -50 });
+    gsap.from(".bottom-text", { duration: 1, opacity: 0, delay: 0.5 }); 
+    gsap.from(".bg-div", { duration: 1.5, opacity: 0, delay: 1 });
+    gsap.from("header", { duration: 1, y: -100, delay: 1 });
+    gsap.from(".gallery-wrapper", { duration: 1.5, opacity: 0, delay: 1.5 });
+  });
+</script>
+
 <style>
+/*Scroll Thumb--------------------------------------------------------*/
 /*width*/
 ::-webkit-scrollbar {
 width:8px;
@@ -30,33 +57,9 @@ background:rgb(101, 187, 247);
 border-radius:1em;
 }
 </style>
+		
+	
 <body>
-	
-	
-	<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lenis = new Lenis({
-      duration: 1.2, // Speed of the scroll (higher is slower)
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing function
-      smooth: true, // Enables smooth scrolling
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  });
-</script>
-	
-	
-	
-	
-	
-	
-	
-	
 
 	<wrapper>
 		
@@ -103,7 +106,10 @@ border-radius:1em;
 		<div class="bg-div">
 		<div class="gradient-overlay-3"></div>
 		<img class="bg-image" src="restraunt overlay.png">
-			
+		</div>
+		<div class="bg-div-2">
+		<img class="bg-image-bottom" src="restraunt overlay 2.png">
+			<div class="gradient-overlay-3"></div>
 		</div>
 		
 		<div class="landing-div">
@@ -270,7 +276,7 @@ border-radius:1em;
 			
 			
 				<p>
-				Website by <a href="Vanity.llc">Vanity LLC </a> </p>
+				Website by <a href="https://Vanity.llc">Vanity LLC </a> </p>
 
 		</footer>
 	

@@ -195,7 +195,7 @@ footer{
 }
 .gallery-img {
  width: 95%;
- height: 30vh;
+ height: 50vh;
 
 }
 
@@ -329,7 +329,7 @@ input {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	height: 100%;
-	width: 90%;
+	width: 95%;
 
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -367,7 +367,7 @@ h4 {
 
 
 .form-button-div {
-	width: 93%;
+	width: 98%;
 	margin-top: 25px;
 	text-align: left;
 	color: black;
@@ -504,6 +504,19 @@ wrapper {
   }
 	h1 {
 	font-size: 16px;   
-		   }		   
+		   }		
+	 .gallery-div-2 {
+	 display: none
+		   }
+		   .gallery-div-1 {
+			   width: 50%;
+		   }
+		   .gallery-div-3 {
+			   width: 50%;
+		   }
+		   .gallery-img {
+			   height: 30vh;
+		   }
 }
+
 
