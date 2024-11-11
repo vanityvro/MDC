@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+
+body{
+	background-color: white;
+	color: white;
+}
+
+
+
+header{
+	display: flex;
+	height: auto;
+	border-bottom-style: solid;
+   	border-width: 1px;
+   	border-color: black;
+	align-content: center;
+	justify-content: center;
+	padding: 5px;
+	background: white;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	opacity: 50%;
+	
+}
+.logo-img {
+	width: 90%;
+	height: auto;
+	object-fit: contain;
+	pointer-events: none;
+}
+.Container-div{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+
+h1{
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 20px;
+	cursor: pointer;
+	color: #65bbf7;
+	opacity: 50%;
+}
+
+h1:hover{
+-webkit-text-stroke: .4vw;
+-webkit-text-stroke-color: white;
+	paint-order: stroke fill;
+	opacity: 100;
+	color: #376281;
+}
+
+header:hover {
+	transition: opacity 1000ms;
+	opacity: 100%;
+}
+
+h2{
+  font-family: "DM Serif Display", serif;
+  font-weight: 200;
+  font-style: normal;
+  color: black;
+}
+a{
+	color: white;
+	font-family: "DM Serif Display", serif;
+  	font-weight: 100;
+ 	font-style: italic;
+	text-decoration: none;
+}
+
+
+
+section{
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+section li{
+	padding-bottom: 10px;
+}
+.Info-div{
+	
+	width: 100%;
+	text-align: center;
+	
+}
+.Ingredient-Section{
+	width: 30%;
+	}
+.Instructions-Section{
+	
+	width: 50%;
+	border-left-style: dotted;
+   	border-width: 1px;
+   	border-color: white;
+	padding-left: 10px;
+	}
+.summary-div{
+}
+
+
+footer{
+	margin-top: 10%;
+	text-align: center;
+}
+
+
+
+.nav-container{
+	display: flex;
+	gap: 5vw;
+	justify-content: space-around;
+}
+
+.Container-div {
+	margin: 0;
+	padding: 0;
+}
+
+.main-content {
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-top: 5vh;
+	flex-direction: column;
+	align-items: center;
+   
+	
+}
+.gallery-wrapper {
+	display: flex;
+	width: 80vw;
+	height: 100vh;
+	position: relative;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+	position: relative;
+}
+
+
+
+.gallery-div-1 {
+	display: flex;
+	flex-direction: column;
+	height: 99%;
+	
+	width: 33.3%;
+	z-index: 5;
+}
+
+
+.gallery-div-2 {
+	display: flex;
+	flex-direction: column;
+	height: 99%;
+
+	width: 33.3%;
+	z-index: 5;
+	padding-top: 40px;
+}
+
+
+
+.gallery-div-3 {
+	display: flex;
+	flex-direction: column;
+	height: 99%;
+	
+	width: 33.3%;
+	z-index: 5;
+	padding-top: 80px;
+}
+
+
+.gallery-text {
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	left: 15px;
+}
+.gallery-img {
+ width: 95%;
+ height: 30vh;
+
+}
+
+.gallery-img:hover {
+border-width: 1px;
+border-color:#65bbf7;
+border-style: solid;
+}
+	
+
+
+@keyframes scroll{
+from {
+		transform:translateY(0);
+    }
+    to {
+    	transform: translateY(calc(-100% - 4px));
+      }
+     }
+     
+.gallery-scroll {
+	animation: scroll 15s linear infinite;
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	gap: 5px;
+	align-items: center;
+	margin-bottom: 5px;
+  }
+
+
+.gradient-overlay-1 {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+	background: rgb(255,255,255);
+background: linear-gradient(184deg, rgba(255,255,255,1)12%, rgba(0,212,255,0) 50%);
+	pointer-events: none;
+}
+
+
+.gradient-overlay-2 {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+background: rgb(255,255,255);
+background: linear-gradient(4deg, rgba(255,255,255,1)12%, rgba(0,212,255,0) 50%);
+	pointer-events: none;
+	
+}
+.gallery-text {
+	display: none;
+}
+
+.landing-div {
+	height: 70vh;
+	width: 90vw;
+
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-div {
+	
+	width: 100px;
+	height: 70px;
+	position: relative;
+}
+
+.top-text {
+    position: absolute;
+    top: -100%;
+    left: -150%;
+    font-size: 100px;
+    color: black;
+    font-family: "WindSong", cursive;
+    font-weight: 500;
+    
+
+}
+
+
+.bottom-text {
+	position: absolute;
+	bottom: 0px;
+	flex-shrink: 0;
+	 white-space: nowrap;
+	color: #376281;
+	left: -100%;
+}
+
+h3 {
+    margin: 0;
+	
+}
+
+.reservation-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 15vh;
+	width: 90%;
+}
+.form-div {
+	display: flex;
+	width: 100%;
+}
+
+
+.form-block {
+	width: 100%;
+	position: relative;
+}
+
+
+
+.form-1 {
+	width: 100%;
+		height: 84%;
+}
+
+input {
+  background-color: #adadad;
+  color: white;
+	width: 90%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 100%;
+	width: 90%;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	
+	border-radius: .5rem;
+	border-color: #65bbf7;
+	background-color: #376281;
+}
+
+.form-heading {
+	width: 60%;
+	padding-bottom: 50px;
+	text-align: center;
+	color: black;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+
+}
+
+
+textarea {
+	width: 90%;
+	height: 100%;
+	padding: 0px;
+}
+
+h4 {
+	margin: 0px;
+}
+
+
+.form-button-div {
+	width: 93%;
+	margin-top: 25px;
+	text-align: left;
+	color: black;
+	display: flex;
+	justify-content: flex-end;
+	
+	
+}
+
+.form-button {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #376281;
+	border-radius: 20PX;
+	color: white;
+	border-radius: .6rem;
+	border-style: solid;
+	border-color: #65bbf7;
+	border-width: 2px;
+	cursor: pointer;
+}
+
+.form-button:hover {
+	background-color: #1b3c54;
+	
+}
+
+
+
+.input-2 {
+	height: 100%;
+}
+
+.text-field {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	color: white;
+	
+}
+
+
+.gallery-wrapper {
+	max-width: 800px;
+}
+
+input:hover {
+	transition: all 200ms;
+	background-color: #1b3c54;
+}
+
+
+.bg-div {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: 25%;
+	height: 60vh;
+	width: 100%;
+	pointer-events: none;
+}
+
+.bg-image {
+	
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 40%;
+}
+
+.gradient-overlay-3 {
+	height: 100%;
+	width: 100%;
+background: linear-gradient(0deg, rgba(255,255,255,1) 5%, rgba(0,212,255,0) 20%);
+	position: absolute;
+	z-index: 1;
+}
+
+
+@media only screen and (max-width: 768px), 
+       only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+  .form-div {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-block {
+    flex: 1;
+    width: 100%;
+  }
+  input {
+    width: 95%;
+    flex-basis: auto;
+  }
+  .top-text {
+    font-size: 90px;
+  }
+  .bottom-text {
+    font-size: 14px;
+    top: 30px;
+  }
+}
