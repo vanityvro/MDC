@@ -45,7 +45,7 @@ h1{
   text-align: center;
 	margin-top: 0;
 	margin-bottom: 0;
-	font-size: 1.2rem;
+	font-size: 20px;
 	cursor: pointer;
 	color: #65bbf7;
 	opacity: 50%;
@@ -449,11 +449,17 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 5%, rgba(0,212,255,0) 20%)
 
 
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-	.form-div{
-		flex-direction: column;
-	}
-	input {
-		width: 95%;
-	}
+  /* For mobile phones */
+  .form-div {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-block {
+    flex: 1;
+    width: 100%;
+  }
+  input {
+    width: 95%;
+    flex-basis: auto;
+  }
 }
