@@ -216,8 +216,8 @@ border-width: 3px;
 border-color:#65bbf7;
 border-style: solid;
 scale : 1.01;
-	margin-bottom: 5%;
-	margin-top:  5%;
+	margin-bottom: 1%;
+	margin-top:  1%;
 		transition: all 500ms;
 }
 	
@@ -543,4 +543,8 @@ wrapper {
  	header {
 	 opacity: 1;
  }
+		 
+		 .gallery-wrapper {
+	max-width: 9	0%;
+}
 }
