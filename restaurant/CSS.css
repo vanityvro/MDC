@@ -63,6 +63,9 @@ h1:hover{
 	paint-order: stroke fill;
 	opacity: 100;
 	color: #376281;
+	scale: 1.05;
+	transition: scale 300ms;
+	transition: opacity 300ms;
 }
 
 header:hover {
@@ -156,6 +159,7 @@ footer{
 	align-content: center;
 	overflow: hidden;
 	position: relative;
+	margin-top: 15vh;
 }
 
 
@@ -199,16 +203,22 @@ footer{
 	top: 0px;
 	left: 15px;
 }
+
 .gallery-img {
  width: 95%;
  height: 50vh;
+	cursor: pointer;
 
 }
 
 .gallery-img:hover {
-border-width: 1px;
+border-width: 3px;
 border-color:#65bbf7;
 border-style: solid;
+scale : 1.01;
+	margin-bottom: 5%;
+	margin-top:  5%;
+		transition: all 500ms;
 }
 	
 
@@ -254,9 +264,7 @@ background: linear-gradient(4deg, rgba(255,255,255,1)12%, rgba(0,212,255,0) 50%)
 	pointer-events: none;
 	
 }
-.gallery-text {
-	display: none;
-}
+
 
 .landing-div {
 	height: 70vh;
@@ -532,4 +540,7 @@ wrapper {
    .bg-image-bottom {
 	width: 100%;
 }
+ 	header {
+	 opacity: 1;
+ }
 }
